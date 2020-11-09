@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="SpringJPA">
+	
+	
+	
+	<class>vo.BoardVO</class>
+	<properties>
+	<!-- 2.1필수 속성 : dialect설정  -->
+	<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9iDialect"/>
+	<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9Dialect" /> -->
+	<!-- 2.2 옵션 속성-->
+	<property name="hibernate.show_sql" value="true"/>
+    <!-- <property name="hibernate.show_sql" value="true"/>          -->
+	<!-- 생성퇸 sql 콘솔출력 -->
+	<property name="hibernate.format_sql" value="true"/>
+    <!-- <property name="hibernate.format_sql" value="true"/> -->
+	<!-- sql 출력시 일정 포맷으로 보기좋게 출력-->
+	<property name="hibernate.use_sql_command" value="true"/>
+    <!-- <property name="hibernate.use_sql_command" value="true"/> -->
+	<!-- sql 에 포함된 주석도 같이 출력 -->	
+	<property name="hibernate.id.new_generator_mappings" value="true"/>
+    <!-- <property name="hibernate.id.new_generator_mappings" value="true"/> -->
+	<!-- key generation 을 사용한다 -->
+	<property name="hibernate.hbm2ddl_auto" value="create"/>
+    <!-- <property name="hibernate.hbm2ddl_auto" value="create"/> -->
+	
+	
+	</properties>
+	
+	</persistence-unit>
+</persistence>
